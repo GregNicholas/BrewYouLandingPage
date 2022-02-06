@@ -24,7 +24,7 @@
       <nav class="nav body_layout">
         <div class="nav_insider">
           <div class="logo">
-            <h3 class="nav__icon">BrewYou <sup>&reg;</sup></h3>
+            <h3 class="nav__icon">YouBrew <sup>&reg;</sup></h3>
           </div>
 
 
@@ -49,7 +49,8 @@
         </div>
 
         <div class="cart_btn_wrapper">
-          <button class="search_btn"><i class="ri-search-line"></i></button>
+          <input id="search-btn" class="search_btn/>
+          <label for="search-btn"> <i class="ri-search-line"></i> </label>
           <button class="cart_btn"> <i class="ri-shopping-bag-fill"></i></button>
         </div>
 
@@ -67,11 +68,61 @@
         </ul>
     </div>
     
-      <img src="./images/brewkit.png" class="product_img" alt="product_img">
+      <!-- <img src="./images/brewkit.png" class="product_img" alt="product_img"> -->
+      <div class="product_carousel">
+        <div class="carousel-item">
+          <img
+            src="./images/premiumallgrain.png"
+            id="product_img"
+            class="product_img"
+            alt="premium all grain kit"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/craftbeerkit.jpg"
+            id="product_img"
+            class="product_img"
+            alt="craft beer kit"
+          />
+        </div>
+        <div class="carousel-item carousel-item-visible">
+          <img
+            src="./images/brewingredients.png"
+            id="product_img"
+            class="product_img"
+            alt="ingredients"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/winekit.png"
+            id="product_img"
+            class="product_img"
+            alt="wine kit"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/rootbeerkit.png"
+            id="product_img"
+            class="product_img"
+            alt="rootbeer kit"
+          />
+        </div>
+        <div class="carousel-actions">
+          <button id="btn-prev" aria-label="Previous slide"><</button>
+          <button id="btn-next" aria-label="Next slide">></button>
+        </div>
+      </div>
 
     <div class="product_text">
-      <h1 class="product_title">BrewYou <sup>&reg;</sup></h1>
-      <p class="product_type">Classic Brewing Kit</p>
+      <h1 class="product_title">YouBrew <sup>&reg;</sup></h1>
+      <p class="product_type">Premium All Grain Kit</p>
+      <p class="product_type">Craft Beer Kit</p>
+      <p class="product_type carousel-item-visible">Brewing Ingredients</p>
+      <p class="product_type">Wine Making Kit</p>
+      <p class="product_type">Root Beer Kit</p>
     </div>
 
     <div class="bottom_nav">
@@ -81,12 +132,11 @@
         </div>
         <div class="dots_wrapper">
           <ul class="dots">
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot active"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-
+            <li id="0" class="dot"></li>
+            <li id="1" class="dot"></li>
+            <li id="2" class="dot active"></li>
+            <li id="3" class="dot"></li>
+            <li id="4" class="dot"></li>
           </ul>
         </div>
     </div>
