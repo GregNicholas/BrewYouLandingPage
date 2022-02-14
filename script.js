@@ -34,9 +34,17 @@ function hideAllSlides() {
   for (let i = 0; i < totalSlides; i++) {
     slides[i].classList.remove("make-item-visible");
     productTypes[i].classList.remove("make-item-visible");
-    //slides[i].classList.add("carousel-item-hidden");
     carouselIndex[i].classList.remove("active");
   }
+}
+
+const jumpTo = (e) => {
+  console.log("in jumpTo", e.target.id)
+  hideAllSlides();
+  slidePosition = e.target.id;
+  slides[slidePosition].classList.add("make-item-visible");
+  productTypes[slidePosition].classList.add("make-item-visible");
+  carouselIndex[slidePosition].classList.add("active");
 }
 
 const nextSlide = () => {
@@ -46,7 +54,6 @@ const nextSlide = () => {
   } else {
     slidePosition = 0;
   }
-  //slides[slidePosition].classList.remove("carousel-item-hidden");
   slides[slidePosition].classList.add("make-item-visible");
   productTypes[slidePosition].classList.add("make-item-visible");
   carouselIndex[slidePosition].classList.add("active");
@@ -59,17 +66,17 @@ const prevSlide = () => {
   } else {
     slidePosition = totalSlides - 1;
   }
-  slides[slidePosition].classList.remove("carousel-item-hidden");
   slides[slidePosition].classList.add("make-item-visible");
-  productTypes[slidePosition].classList.remove("carousel-item-hidden");
   productTypes[slidePosition].classList.add("make-item-visible");
   carouselIndex[slidePosition].classList.add("active");
 };
-console.log(carouselIndex[0]);
-carouselIndex[0].addEventListener("click", hideAllSlides);
 
 prev.addEventListener("click", prevSlide);
 next.addEventListener("click", nextSlide);
+
+for (let i = 0; i<carouselIndex.length; i++){
+  carouselIndex[i].addEventListener("click", jumpTo);
+}
 
 // Toggle Nav Menu
 const toggleMenu = (toggleId, navId) => {

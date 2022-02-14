@@ -445,11 +445,12 @@ header {
   height: 7px;
   border-radius: 50%;
   background-color: rgba(238, 238, 238, 0.762);
+  cursor: pointer;
 }
 
 .dot.active {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   background-color: var(--color-text);
   box-shadow: 0 0 3px var(--color-text);
 }
