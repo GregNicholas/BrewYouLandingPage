@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>YouBrew Landing Page</title>
   </head>
   <body>
@@ -16,8 +19,8 @@
     <div class="right_container"></div>
 
     <div class="strips">
-        <div class="left_strip"></div>
-        <div class="right_strip"></div>
+      <div class="left_strip"></div>
+      <div class="right_strip"></div>
     </div>
 
     <header>
@@ -27,31 +30,83 @@
             <h3 class="nav__icon">YouBrew <sup>&reg;</sup></h3>
           </div>
 
-
           <div class="nav__menu" id="nav__menu">
-              <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">Kits</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Ingredients</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Wine</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Root Beer</a></li>
-                  <li class="nav__item search_btn">
-                    <button class="search_btn">
-                      <i class="ri-search-line"></i>
-                    </button>
-                  </li>
-                  <li class="nav__item cart_btn">
-                    <button class="cart_btn">
-                        <i class="ri-shopping-bag-fill"></i>
-                    </button>
-                  </li>
+            <div class="cart_btn_side">
+              <button class="search_btn make-item-visible" id="search_btn">
+                <i class="ri-search-line"></i>
+              </button>
+              <label for="search-input"
+                ><input
+                  class="search_input"
+                  id="search_input"
+                  type="text"
+                  value=""
+                  placeholder="search"
+                />
+              </label>
+              <button class="cart_btn make-item-visible">
+                <i class="ri-shopping-bag-fill"></i>
+              </button>
+            </div>
+
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  ><i class="ri-briefcase-fill"></i>Kits</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  ><i class="ri-leaf-fill"></i>Ingredients</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  ><i class="ri-goblet-fill"></i>Wine</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link"
+                  ><i class="ri-bubble-chart-line"></i>Root Beer</a
+                >
+              </li>
+              <li class="nav__item search_btn">
+                <button class="search_btn">
+                  <i class="ri-search-line"></i>
+                </button>
+              </li>
+              <li class="nav__item cart_btn">
+                <button class="cart_btn">
+                  <i class="ri-shopping-bag-fill"></i>
+                </button>
+              </li>
+            </ul>
+            <div class="social_side">
+              <ul class="social_list">
+                <li class="social_item"><i class="ri-facebook-fill"></i></li>
+                <li class="social_item"><i class="ri-instagram-fill"></i></li>
+                <li class="social_item"><i class="ri-twitter-fill"></i></li>
               </ul>
-          </div>  
+            </div>
+          </div>
         </div>
 
         <div class="cart_btn_wrapper">
-          <input id="search-btn" class="search_btn/>
-          <label for="search-btn"> <i class="ri-search-line"></i> </label>
-          <button class="cart_btn"> <i class="ri-shopping-bag-fill"></i></button>
+          <button class="search_btn make-item-visible" id="search_btn">
+            <i class="ri-search-line"></i>
+          </button>
+          <label for="search-input"
+            ><input
+              class="search_input"
+              id="search_input"
+              type="text"
+              value=""
+              placeholder="search"
+            />
+          </label>
+          <button class="cart_btn make-item-visible">
+            <i class="ri-shopping-bag-fill"></i>
+          </button>
         </div>
 
         <button class="menu_toggle_btn" id="menu_toggle_btn">
@@ -60,87 +115,87 @@
       </nav>
     </header>
 
-    <div class="social">
-        <ul class="social__list">
-            <li class="social_item"><i class="ri-facebook-fill"></i></li>
-            <li class="social_item"><i class="ri-instagram-fill"></i></li>
-            <li class="social_item"><i class="ri-twitter-fill"></i></li>
-        </ul>
+    <div class="carousel_actions">
+      <button id="btn-prev" aria-label="Previous slide">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+      <!-- <button id="btn-prev" aria-label="Previous slide"><</button> -->
+      <button id="btn-next" aria-label="Next slide">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
     </div>
-    
-      <!-- <img src="./images/brewkit.png" class="product_img" alt="product_img"> -->
-      <div class="product_carousel">
-        <div class="carousel-item">
-          <img
-            src="./images/premiumallgrain.png"
-            id="product_img"
-            class="product_img"
-            alt="premium all grain kit"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="./images/craftbeerkit.jpg"
-            id="product_img"
-            class="product_img"
-            alt="craft beer kit"
-          />
-        </div>
-        <div class="carousel-item carousel-item-visible">
-          <img
-            src="./images/brewingredients.png"
-            id="product_img"
-            class="product_img"
-            alt="ingredients"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="./images/winekit.png"
-            id="product_img"
-            class="product_img"
-            alt="wine kit"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="./images/rootbeerkit.png"
-            id="product_img"
-            class="product_img"
-            alt="rootbeer kit"
-          />
-        </div>
-        <div class="carousel-actions">
-          <button id="btn-prev" aria-label="Previous slide"><</button>
-          <button id="btn-next" aria-label="Next slide">></button>
-        </div>
+    <!-- <img src="/img/brewkit.png" class="product_img" alt="product_img"> -->
+    <div class="product_carousel">
+      <div class="carousel-item">
+        <img
+          src="/images/craftbeerkit.jpg"
+          id="craft_img"
+          class="product_img"
+          alt="craft beer kit"
+        />
       </div>
+      <div class="carousel-item">
+        <img
+          src="/images/brewingredients.png"
+          id="ingredients_img"
+          class="product_img"
+          alt="ingredients"
+        />
+      </div>
+      <div class="carousel-item make-item-visible">
+        <img
+          src="/images/premiumallgrain.png"
+          id="grain_img"
+          class="product_img"
+          alt="premium all grain kit"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/images/winekit.png"
+          id="wine_img"
+          class="product_img"
+          alt="wine kit"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/images/rootbeerkit.png"
+          id="rootbeer_img"
+          class="product_img"
+          alt="rootbeer kit"
+        />
+      </div>
+    </div>
 
     <div class="product_text">
       <h1 class="product_title">YouBrew <sup>&reg;</sup></h1>
       <p class="product_type">Premium All Grain Kit</p>
       <p class="product_type">Craft Beer Kit</p>
-      <p class="product_type carousel-item-visible">Brewing Ingredients</p>
+      <p class="product_type make-item-visible">Brewing Ingredients</p>
       <p class="product_type">Wine Making Kit</p>
       <p class="product_type">Root Beer Kit</p>
     </div>
 
     <div class="bottom_nav">
-        <div class="slide_nav_wrapper">
-            <button class="prev direction_btn"><i class="ri-arrow-right-s-line"></i></button>
-            <button class="next direction_btn"><i class="ri-arrow-left-s-line"></i></button>
-        </div>
-        <div class="dots_wrapper">
-          <ul class="dots">
-            <li id="0" class="dot"></li>
-            <li id="1" class="dot"></li>
-            <li id="2" class="dot active"></li>
-            <li id="3" class="dot"></li>
-            <li id="4" class="dot"></li>
-          </ul>
-        </div>
+      <div class="social">
+        <ul class="social__list">
+          <li class="social_item"><i class="ri-facebook-fill"></i></li>
+          <li class="social_item"><i class="ri-instagram-fill"></i></li>
+          <li class="social_item"><i class="ri-twitter-fill"></i></li>
+        </ul>
+      </div>
+      <div class="dots_wrapper">
+        <ul class="dots">
+          <li id="0" class="dot"></li>
+          <li id="1" class="dot"></li>
+          <li id="2" class="dot active"></li>
+          <li id="3" class="dot"></li>
+          <li id="4" class="dot"></li>
+        </ul>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
