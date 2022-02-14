@@ -6,7 +6,9 @@ const carouselIndex = document.querySelectorAll(".dot");
 const carousel = document.getElementById("carousel");
 const productTypes = document.getElementsByClassName("product_type");
 const searchInput = document.getElementById("search_input");
+const searchInputSide = document.getElementById("search_input_side");
 const searchButton = document.getElementById("search_btn");
+const searchButtonSide = document.getElementById("search_btn_side");
 
 searchButton.addEventListener("click", () => {
   console.log("searchButton listener");
@@ -15,15 +17,27 @@ searchButton.addEventListener("click", () => {
   searchInput.focus();
 });
 
+searchButtonSide.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log("searchButtonSide listener");
+  searchButtonSide.classList.remove("make-item-visible");
+  searchInputSide.classList.add("make-item-visible");
+  searchInputSide.focus();
+});
+
 window.addEventListener("click", function (e) {
   //detect click outside of the input
   if (
-    searchInput.classList.contains("make-item-visible") &&
-    !searchInput.contains(e.target) &&
+    (searchInput.classList.contains("make-item-visible") || 
+    searchInputSide.classList.contains("make-item-visible")) &&
+    !searchInput.contains(e.target) && !searchInputSide.contains(e.target) &&
     !searchButton.contains(e.target)
   ) {
+    console.log("hide search")
     searchInput.classList.remove("make-item-visible");
     searchButton.classList.add("make-item-visible");
+    searchInputSide.classList.remove("make-item-visible");
+    searchButtonSide.classList.add("make-item-visible")
   }
 });
 
