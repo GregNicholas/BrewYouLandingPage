@@ -13,8 +13,10 @@ Features:
 - Fast animations with GSAP
 
 
-
 - Live Demo URL: [YouBrew](https://youbrew.netlify.app/)
 
+Potential changes: 
+-Make the intro animations shorter
+-Add other pages
 
 Greg Schoenberg
